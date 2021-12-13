@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       curr: 0,
-      color: "black",
+      color: "white",
     };
   }
 
