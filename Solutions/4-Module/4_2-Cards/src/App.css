@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.cardIMG {
+}
+.card {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-content {
+  text-align: center;
+
+  width: 80%;
+}
+.card-title {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.card-desc {
+  margin: 10px;
+}
+.card-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.card-links:last-child {
+  margin: 0;
+}
+
+.link {
+  margin-right: 15px;
+  color: orangered;
+}
