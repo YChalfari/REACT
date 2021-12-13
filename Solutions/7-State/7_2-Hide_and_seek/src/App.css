@@ -1,0 +1,22 @@
+.btn {
+  padding: 5px;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.true {
+  visibility: visible;
+}
+.false {
+  visibility: hidden;
+}
+.App {
+  margin: 0 auto;
+  height: 70vh;
+  width: 80vw;
+}
+.box {
+  height: 80%;
+  width: 80%;
+  background-color: yellow;
+}

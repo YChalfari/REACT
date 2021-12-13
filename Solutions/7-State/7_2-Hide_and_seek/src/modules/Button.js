@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = (props) => {
   return (
-    <button onClick={props.increment} className={props.class}>
+    <button onClick={props.peekaboo} className={props.class}>
       {props.text}
     </button>
   );
