@@ -1,7 +1,17 @@
-.square {
-  width: 200px;
-  height: 200px;
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.circle {
-  border-radius: 50%;
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  font-size: 1.3rem;
+  font-weight: 650;
+  width: 30%;
+  height: 50px;
 }

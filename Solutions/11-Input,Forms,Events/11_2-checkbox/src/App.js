@@ -1,20 +1,35 @@
 import React from "react";
 import "./App.css";
-import Chameleon from "./modules/Chameleon";
-class App extends React.Component {
-  state = { counter: 0 };
+import CheckBox from "./modules/CheckBox";
 
-  componentDidMount() {
-    setInterval(() => {
-      this.setState({ counter: this.state.counter + 1 });
-      console.log(this.state.counter);
-    }, 500);
-  }
+class App extends React.Component {
+  state = { selectedColor: "" };
+
+  handleCheckboxChange = (color) => this.setState({ selectedColor: color });
 
   render() {
     return (
       <div className="App">
-        <Chameleon count={this.state.counter} />
+        <CheckBox
+          isChecked={false}
+          name="read"
+          text="I read the term of the app"
+        />
+        <CheckBox
+          isChecked={false}
+          name="accept"
+          text="I accept the term of the app"
+        />
+        <CheckBox
+          isChecked={true}
+          name="weekly"
+          text="I want to receive weekly news letter"
+        />
+        <CheckBox
+          isChecked={true}
+          name="offers"
+          text="I want to receive sales and offers"
+        />
       </div>
     );
   }
