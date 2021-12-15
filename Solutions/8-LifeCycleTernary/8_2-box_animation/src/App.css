@@ -1,0 +1,13 @@
+.box {
+  background-color: palevioletred;
+  margin: 10px;
+  animation: box-animation 1s ease-in-out none 1;
+}
+@keyframes box-animation {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
