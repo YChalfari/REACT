@@ -17,7 +17,7 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        //* now our custom button is truly resuable because it gets its onclock
+        //* now our custom button is truly reusable because it gets its onclick
         function and title via props
         <CustomButton onHandleClick={this.handleClick} title={title} />
         {this.state.isOpen && <MyAwesomeComponent />}
