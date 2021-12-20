@@ -1,0 +1,24 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 5vmin;
+}
+.btn {
+  font-size: 1.3rem;
+  font-weight: 650;
+  min-width: max-content;
+  width: 15vmin;
+  min-height: 50px;
+  margin-left: 10px;
+}
