@@ -1,0 +1,15 @@
+.product-details {
+  display: flex;
+}
+img {
+  max-width: 200px;
+}
+.product-details-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  margin: 5%;
+}
