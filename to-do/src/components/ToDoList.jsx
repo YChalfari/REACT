@@ -6,6 +6,7 @@ import en from "javascript-time-ago/locale/en.json";
 import "./ToDoList.css";
 import logo from "../todologo.png";
 import woman from "../womanwork.png";
+import postit from "../postit.png";
 
 TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo("en-US");

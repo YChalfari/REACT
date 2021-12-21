@@ -1,6 +1,6 @@
 .main {
-  /* display: flex;
-  flex-direction: colum; */
+  display: flex;
+  flex-direction: column;
   padding: 5%;
   border: 1px solid black;
   width: 550px;
@@ -15,23 +15,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: max-content;
   height: 100%;
-  color: green;
+
   cursor: pointer;
-  text-align: center;
+
+  width: 41.8px;
   margin-right: 2vmin;
 }
+.btn img {
+  width: 115%;
+}
+.btn img:hover {
+  transform: scale(1.2);
+}
 .todo-item {
+  margin-top: 5px;
   width: 100%;
   height: 7vmin;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+  text-align: none;
 }
-i {
-  line-height: 100%;
-}
+
 select {
   height: 30px;
   outline: none;
@@ -52,6 +60,7 @@ select {
 }
 .list-text {
   display: flex;
+  line-height: 1.2rem;
 }
 .woman {
   width: 25%;
@@ -67,12 +76,12 @@ select {
   font-size: 0.8rem;
 }
 input {
-  margin-top: 2%;
+  margin: 2% auto;
   padding: 2%;
   width: 80%;
   outline: none;
   border-radius: 10px;
-  border: 1.5px solid #716385;
+  border: 1.5px solid #6a31bb;
 }
 input:focus {
   border: 1.5px solid blue;

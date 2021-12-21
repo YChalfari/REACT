@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import postit from "../postit.png";
 export class ToDo extends Component {
   state = { todo: this.props.todo };
   handleDelete = (e) => {
@@ -17,7 +17,8 @@ export class ToDo extends Component {
       <div className="todo-item">
         <div className="list-text">
           <div className="btn" onClick={this.handleDelete}>
-            <i className="far fa-check-square fa-2x "></i>
+            <img src={postit} alt="" />
+            {/* <i className="far fa-check-square fa-2x "></i> */}
           </div>
           <h3
             className={this.props.color}
