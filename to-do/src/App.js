@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ToDoList from "./components/ToDoList";
+import ToDo from "./components/ToDo";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    userInput: "",
+    currToDo: "",
+    todos: [],
+  };
+  handleChange = (e) => {
+    this.setState({ userInput: e.target.value });
+  };
+  handleSubmit = (e) => {
+    const currVal = this.state.userInput;
+    const todos = this.state.todos;
+    if (e.keyCode === 13) {
+      todos.push(currVal);
+      this.setState({ currToDo: currVal, todos: todos, userInput: "" }, () =>
+        console.log(this.state)
+      );
+    }
+  };
+  render() {
+    return (
+      <div className="App">
+        <input
+          onKeyUp={this.handleSubmit}
+          onChange={this.handleChange}
+          value={this.state.userInput}
+          type="text"
+        />
+        <ToDoList todos={this.state.todos} />
+      </div>
+    );
+  }
 }
-
 export default App;
