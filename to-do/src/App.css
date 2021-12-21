@@ -1,5 +1,11 @@
 .App {
+  padding: 5vh 5vw;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./todoimg.jpeg");
 }
 .todo-item h3 {
   display: inline-block;

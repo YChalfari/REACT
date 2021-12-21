@@ -3,6 +3,9 @@ import TimeAgo from "javascript-time-ago";
 import { v4 } from "uuid";
 import ToDo from "./ToDo";
 import en from "javascript-time-ago/locale/en.json";
+import "./ToDoList.css";
+import logo from "../todologo.png";
+import woman from "../womanwork.png";
 
 TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo("en-US");
@@ -68,14 +71,18 @@ export class ToDoList extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="main">
+        <img className="woman" src={woman} alt="" />
+        {/* <h1 className="main-title">To-Do</h1> */}
+        <img className="logo" src={logo} alt="" />
         <input
+          className="main-input"
           onKeyUp={this.handleSubmit}
           onChange={this.handleChange}
           value={this.state.userInput}
           type="text"
         />
-        {this.renderToDos()}
+        <div className="list-wrap">{this.renderToDos()}</div>
       </div>
     );
   }

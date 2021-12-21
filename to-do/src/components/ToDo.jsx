@@ -15,26 +15,33 @@ export class ToDo extends Component {
   render() {
     return (
       <div className="todo-item">
-        <h3
-          className={this.props.color}
-          contentEditable="true"
-          onInput={this.handleEdit}
-        >
-          {this.props.todo.value}
-        </h3>
-        <span className="edit-span">edit</span>
-        <span>{this.props.time}</span>
-        {/* <button onClick={this.handleEdit}>Edit</button> */}
+        <div className="list-text">
+          <div className="btn" onClick={this.handleDelete}>
+            <i className="far fa-check-square fa-2x "></i>
+          </div>
+          <h3
+            className={this.props.color}
+            contentEditable="true"
+            onInput={this.handleEdit}
+          >
+            {this.props.todo.value}
+          </h3>
+          <span className="edit-span">edit</span>
+        </div>
 
-        <select onChange={this.handleImportance} name="" value="" id="">
-          <option value="" disabled="true">
-            Priority
-          </option>
-          <option value="skyblue">Low</option>
-          <option value="lightpink">Med</option>
-          <option value="red">High</option>
-        </select>
-        <button onClick={this.handleDelete}>Delete</button>
+        {/* <button onClick={this.handleEdit}>Edit</button> */}
+        <div className="buttons-wrap">
+          <select onChange={this.handleImportance} name="" value="" id="">
+            <option value="" disabled="true">
+              Priority
+            </option>
+            <option value="skyblue">Low</option>
+            <option value="lightpink">Med</option>
+            <option value="red">High</option>
+          </select>
+
+          <span className="time">{this.props.time}</span>
+        </div>
       </div>
     );
   }
