@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en.json";
 import { v4 } from "uuid";
 import ToDo from "./ToDo";
-import en from "javascript-time-ago/locale/en.json";
+
 import "./ToDoList.css";
 import logo from "../todologo.png";
 import woman from "../womanwork.png";
-import postit from "../postit.png";
 
 TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo("en-US");
@@ -22,21 +22,18 @@ export class ToDoList extends Component {
   };
   handleSubmit = (e) => {
     const currVal = this.state.userInput;
-    const todos = this.state.todos;
+    const todos = [...this.state.todos];
     const id = v4();
     const newToDo = { id: v4(), value: currVal };
     if (e.keyCode === 13) {
       todos.push(newToDo);
-      this.setState({ currToDo: currVal, todos: todos, userInput: "" }, () =>
-        console.log(this.state)
-      );
+      this.setState({ currToDo: currVal, todos: todos, userInput: "" });
     }
   };
   handleEdit = (value, obj) => {
-    const todos = this.state.todos;
+    const todos = [...this.state.todos];
     const item = todos.find((todo) => todo.id === obj.id);
-    const index = todos.findIndex((todo) => todo.id === obj.id);
-    const updatedTodo = { ...item, value: value };
+    const updatedTodo = { ...item, value };
     this.setState({
       todos: todos.map((todo) => (todo.id === item.id ? updatedTodo : todo)),
     });
@@ -49,7 +46,6 @@ export class ToDoList extends Component {
   handleImportance = (value, obj) => {
     const todos = this.state.todos;
     const item = todos.find((todo) => todo.id === obj.id);
-    const index = todos.findIndex((todo) => todo.id === obj.id);
     const updatedTodo = { ...item, color: value };
     console.log(updatedTodo);
     this.setState({
