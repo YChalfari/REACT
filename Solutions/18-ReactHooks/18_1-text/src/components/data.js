@@ -1,0 +1,3 @@
+const data =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis finibus velit at eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis felis, bibendum sed lacinia ac, vehicula vel neque. Nam porttitor efficitur venenatis. Sed et hendrerit arcu, eu lobortis metus. Duis vel magna eget nibh pharetra vestibulum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis finibus velit at eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis felis, bibendum sed lacinia ac, vehicula vel neque. Nam porttitor efficitur venenatis. Sed et hendrerit arcu, eu lobortis metus. Duis vel magna eget nibh pharetra vestibulum.";
+export default data;
