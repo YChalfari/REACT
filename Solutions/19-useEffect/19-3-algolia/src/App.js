@@ -18,10 +18,7 @@ const App = () => {
       setResults(data.data.hits);
     })();
   }, [query]);
-  // useEffect(() => {
-  //   const filtered = countries.filter((country) => country.name.includes(term));
-  //   setFilteredCountries(filtered);
-  // }, [term]);
+ 
 
   useEffect(() => {
     (async () => {
